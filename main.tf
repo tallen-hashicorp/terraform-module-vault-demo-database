@@ -1,6 +1,6 @@
 module "database_secret" {
   source  = "app.terraform.io/vault-adoption/vault-demo-database-secrets/module"
-  version = "0.0.1"
+  version = "0.0.2"
   namespace_path  = var.namespace_path
   db_name         = postgresql_database.database.name
   db_host         = var.db_host
