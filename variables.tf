@@ -24,3 +24,7 @@ variable "namespace_path" {
   type = string
 }
 
+variable "group_id" {
+  description = "The ID of the Vault group to add the new policy to"
+  type = string
+}

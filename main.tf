@@ -1,11 +1,12 @@
 module "database_secret" {
   source  = "app.terraform.io/vault-adoption/vault-demo-database-secrets/module"
-  version = "0.0.2"
+  version = "0.0.3"
   namespace_path  = var.namespace_path
   db_name         = postgresql_database.database.name
   db_host         = var.db_host
   db_username     = postgresql_role.admin_user.name
   db_password     = random_password.password.result
+  group_id        = var.group_id
 }
 
 resource "random_password" "password" {
